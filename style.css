@@ -48,6 +48,23 @@ p {
 	margin-top: 1em;
 }
 
+.electro {
+	color: #959c5f;
+}
+
+.rap {
+	color: #9c5050;
+}
+
+.rock {
+	color: #6aa4b3;
+}
+
+#best {
+	font-size: 17px;
+	margin-bottom: 1em;
+}
+
 footer {
 	padding: 20px;
 	background: #555;
