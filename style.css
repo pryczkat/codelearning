@@ -117,8 +117,7 @@ img {
 }
 
 #best {
-	font-size: 17px;
-	margin-bottom: 1em;
+	font-weight: bold;
 }
 
 footer {
@@ -153,6 +152,18 @@ section .content {
     max-width: 750px;
     margin: 0 auto;
 }
+/*
+section {
+	overflow: auto;
+}
+*/
+.content:after{
+	content: "";
+	display: block;
+	clear: both;
+	}
+
+
 
 #one-page {
 	padding-top: 74px;
@@ -177,5 +188,9 @@ section .content {
 
 .black {
 	background: #000;
+}
+
+section ul li {
+	list-style-position: inside;
 }
 
