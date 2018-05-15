@@ -137,6 +137,18 @@ footer {
 One Page Layout
 */
 
+#one-page {
+	padding-top: 62px;
+}
+
+#one-page header {
+	width: 100%;
+	position: fixed;
+	top: 0;
+	z-index:100;
+	box-shadow: 0 6px 10px -6px rgba(0,0,0,0.2);
+}
+
 #menu-button {
 	display: none;
 }
@@ -154,38 +166,48 @@ One Page Layout
 	margin-bottom: 1em;
 }
 
+section .content {
+    max-width: 750px;
+    margin: 0 auto;
+}
+
+.background {
+	background-image: url('https://picsum.photos/1600/500/?random');
+	position: relative;
+    background-size: cover;
+	background-position: center center;
+	background-attachment: fixed;
+	
+}
+.background:before {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: #444;
+    opacity: 0.5;
+	content: "";
+	transition: all 0.3s;
+}
+
+.background-content {
+	margin: 10em 0;
+	text-align: center;
+	position: relative;
+}
+
 #hello .content {
     column-count: 3;
     column-gap: 2rem;
     max-width: unset;
 }
 
-section .content {
-    max-width: 750px;
-    margin: 0 auto;
-}
-/*
-section {
-	overflow: auto;
-}
-*/
 .content:after{
 	content: "";
 	display: block;
 	clear: both;
 	}
-
-#one-page {
-	padding-top: 74px;
-}
-
-#one-page header {
-	width: 100%;
-	position: fixed;
-	top: 0;
-	z-index:100;
-	box-shadow: 0 6px 10px -6px rgba(0,0,0,0.2);
-}
 
 .white{
 	background: #fff;
@@ -207,7 +229,6 @@ section ul li {
 @media screen and (max-width: 800px) {
 	
 	header nav {
-		
 		position: absolute;
 		top: 76px;
 		width: 100%;
@@ -265,14 +286,21 @@ section ul li {
 		transform: scale(0,0);
 	}
 	
-		#menu-button:focus + nav {
+	#menu-button:focus + nav {
 		left: 0;
 	}
 	#hello .content {
 		column-count: 1;
 	}
 	
+	.background {
+		background-attachment: scroll;
 	
+	}
+	
+	.background:before {
+		background: red;
+	}
 	
 
 }
